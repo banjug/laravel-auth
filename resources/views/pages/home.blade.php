@@ -2,8 +2,10 @@
 @section('content')
     <main>
         @auth
-            <h2>Benvenuto {{Auth::user()->name}}</h2>
-            <a href="{{route('logout')}}" class="btn btn-primary">Logout</a>
+            <div class="form-group">
+                <h2>Benvenuto {{Auth::user()->name}}</h2>
+                <a href="{{route('logout')}}" class="btn btn-primary">Logout</a>
+            </div>
         @else
             <section>
                 <h2>Effettua la registrazione</h2>
@@ -11,21 +13,21 @@
                     @method('POST')
                     @csrf
 
-                    <div>
+                    <div class="form-group">
                         <label for="name">Nome</label>
-                        <input type="text" name="name">
+                        <input type="text" name="name" class="form-control">
                     </div>
-                    <div>
+                    <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" name="email">
+                        <input type="email" name="email" class="form-control">
                     </div>
-                    <div>
+                    <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" name="password">
+                        <input type="password" name="password" class="form-control">
                     </div>
-                    <div>
+                    <div class="form-group">
                         <label for="password_confirmation">Conferma Password</label>
-                        <input type="password" name="password_confirmation">
+                        <input type="password" name="password_confirmation" class="form-control">
                     </div>
                     <input type="submit" value="Registrati" class="btn btn-primary">
                 </form>
@@ -36,13 +38,13 @@
                     @method('POST')
                     @csrf
 
-                                    <div>
+                    <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" name="email">
+                        <input type="email" name="email" class="form-control">
                     </div>
-                    <div>
+                    <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" name="password">
+                        <input type="password" name="password" class="form-control">
                     </div>
                     
                     <input type="submit" value="Login" class="btn btn-primary">

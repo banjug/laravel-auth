@@ -7,7 +7,7 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-header, main, footer {
+header, footer {
     text-align: center;
 }
 
@@ -15,3 +15,12 @@ header, footer {
     padding: 50px 0;
 }
 
+main {
+    width: 50%;
+    margin: 0 auto;
+    section {
+        form {
+            margin-bottom: 50px;
+        }
+    }
+}

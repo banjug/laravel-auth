@@ -10963,7 +10963,6 @@ a.text-dark:focus {
 }
 
 header,
-main,
 footer {
   text-align: center;
 }
@@ -10971,5 +10970,14 @@ footer {
 header,
 footer {
   padding: 50px 0;
+}
+
+main {
+  width: 50%;
+  margin: 0 auto;
+}
+
+main section form {
+  margin-bottom: 50px;
 }
 
